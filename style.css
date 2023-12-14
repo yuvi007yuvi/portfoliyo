@@ -4,7 +4,6 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 
@@ -16,6 +15,57 @@
     --text-color: #ededed;
     --main-bg-color: #00abf0;
 }
+
+/* Add this to your existing CSS file or create a new one */
+
+/* ... (your existing styles) ... */
+
+/* Add this to your existing CSS file or create a new one */
+
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+}
+
+.home-contant {
+    width: 50%;
+    margin-top: 90px;
+}
+
+.vector-container {
+    flex-shrink: 0;
+}
+
+.vector {
+    max-width: 100%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-contant {
+        width: 100%;
+        margin-bottom: 20px; /* Add space between the two divs */
+    }
+
+    .vector-container {
+        margin-top: 20px; /* Add space between the two divs */
+    }
+}
+
+/* ... (your existing styles) ... */
+
+/* ... (your existing styles) ... */
+
+
+
 
 html {
     font-size: 62.5%;
@@ -366,3 +416,159 @@ section {
     font-size: 1.5rem;
     padding-top: .5rem;
 }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    
+    .skills-section{
+    padding-top: 20px;
+    }
+    
+    .skills-header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    }
+    
+    .skills-header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #2ecc71;
+    border-radius: 2px;
+    }
+    
+    .skills-container{
+    display: grid;
+    grid-tempLate-columns: repeat(5, 1fr);
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    grid-gap:1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+    }
+    .skills-box{
+    padding: 1rem;
+    color: #000;
+    cursor:pointer;
+    }
+    .skills-box:hover > .skills-title::after,
+    .skills-box:hover > .skills-title::before{
+    width: 30px;
+    }
+    .skills-box:hover .skills-img{
+    transform: translateX(-20px);
+    }
+    
+    .skills-title{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    }
+    
+    .skills-title:after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    right: 50%;
+    width:20px;
+    height:px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: .5s;
+    }
+    
+    .skills-title:before{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    /* left: 50%; */
+    width:100px;
+    height:4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+    }
+    
+    .skills-icons{
+    width:50px;
+    z-index:2;
+    }
+    
+    .skills-img{
+    width:90px;
+    height:90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #001329;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: .5s;
+    }
+    
+    .skills-img:after{
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    width:50%;
+    height:90px;
+    background: rgba(3, 197, 245, 0.5);
+    border-radius: 45px 0 0 45px;
+    }
+    .skills-title h3{
+    color: #fff8f8;
+    margin-top: 1rem;
+    }
+    @media screen and (max-width:990px){
+     .skills-container{
+     grid-tempLate-columns: repeat(2, 1fr);
+     padding: 2rem 50px;
+     }
+    }
+    
+    @media screen and (max-width:650px){
+     .skills-container{
+     grid-tempLate-columns:2fr;
+     padding: 2rem 50px;
+     }
+    }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction:column;
+        align-items: flex-start; /* Align content to the left */
+        text-align: left; /* Align text to the left */
+    }
+
+    
+    .home-sci {
+        position: relative;
+        /* display: flex; */
+        justify-content: space-between;
+        /* width: 30.5rem; */
+        /* height: 10.5rem; */
+    }
+
+    .home-sci {
+
+    }
+}
+
+
+/* ... (your existing styles) ... */
