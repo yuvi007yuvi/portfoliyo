@@ -1,0 +1,262 @@
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 200px;
+}
+
+.btn-box.btns a::before {
+    background: #00abf0;
+}
+
+.footer {
+    background-color: #081b29;
+    color: #ededed;
+    padding: 40px 9%;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .footer-logo {
+    font-size: 2.5rem;
+    color: #00abf0;
+    font-weight: bold;
+} */
+
+.footer-links a {
+    color: #ededed;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.footer-links a:hover {
+    color: #00abf0;
+}
+
+.footer-social a {
+    font-size: 2rem;
+    color: #ededed;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-text p {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .about {
+        padding: 60px 9%;
+    }
+
+    .footer {
+        padding: 30px 9%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 20px;
+    }
+}
+logo {
+    /*   background: black; */
+      color: black;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    .glitch {
+      font-size: 5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: relative;
+      text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+      animation: glitch 725ms infinite;
+    }
+    
+    .glitch span {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .glitch span:first-child {
+      animation: glitch 500ms infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      transform: translate(-0.04em, -0.03em);
+      opacity: 0.75;
+    }
+    
+    .glitch span:last-child {
+      animation: glitch 375ms infinite;
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      transform: translate(0.04em, 0.03em);
+      opacity: 0.75;
+    }
+    
+    @keyframes glitch {
+      0% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+          0.025em 0.04em 0 #fffc00;
+      }
+      15% {
+        text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+          0.025em 0.04em 0 #fffc00;
+      }
+      16% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+          -0.05em -0.05em 0 #fffc00;
+      }
+      49% {
+        text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+          -0.05em -0.05em 0 #fffc00;
+      }
+      50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+          0 -0.04em 0 #fffc00;
+      }
+      99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+          0 -0.04em 0 #fffc00;
+      }
+      100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+          -0.04em -0.025em 0 #fffc00;
+      }
+    }
+    /* Style for the Projects section */
+.projects {
+    /* background-color: #f7f7f7; */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 6.5rem;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 300px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.project p {
+    font-size: 1.4rem;
+    padding: 0 20px 20px;
+}
+
+h2 {
+    position: relative;
+    display: inline-block;
+    /* font-size: ; */
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #3498db; /* Change to your preferred color */
+    transition: width 0.3s;
+}
+
+h2:hover::after {
+    width: 100%;
+}
+
+/* Gradient Text */
+
+h2.gradient {
+    background: linear-gradient(45deg, #3498db, #e74c3c); /* Change to your preferred gradient colors */
+    color: transparent;
+}
+
+/* Shadow Hover Effect */
+
+h2.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust values for your preferred shadow effect */
+    transition: text-shadow 0.3s;
+}
+
+h2.shadow:hover {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Adjust values for the hover effect */
+}
+
+/* Typing Animation */
+
+h2.typing::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

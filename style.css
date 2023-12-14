@@ -6,7 +6,6 @@
     border: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-
 }
 
 :root {
@@ -14,6 +13,82 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-bg-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    /* display: none; */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: var(--second-bg-color);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    #menu-icon {
+        display: block;
+    }
 }
 
 /* Add this to your existing CSS file or create a new one */
@@ -42,10 +117,17 @@
 .vector {
     max-width: 100%;
 }
+img.vector{
+    margin-top: 15rem;
+    height: 50rem;
+    width: 70rem;
+    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+}
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .home {
+        margin-top: 30px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -56,7 +138,7 @@
     }
 
     .vector-container {
-        margin-top: 20px; /* Add space between the two divs */
+         /* Add space between the two divs */
     }
 }
 
@@ -147,11 +229,7 @@ section {
     -webkit-text-stroke: .7px var(--main-bg-color);
 }
 
-.home-contant p {
-    font-size: 1.6rem;
-    margin: 2rem 0 4rem;
 
-}
 
 .btn-box {
     position: relative;
@@ -159,6 +237,7 @@ section {
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
+    margin-top: 10rem;
 
 }
 
@@ -565,10 +644,12 @@ section {
         /* height: 10.5rem; */
     }
 
-    .home-sci {
+    /* .home-sci {
 
-    }
+    } */
 }
-
+/* .navbar{
+    background-color: transparent;
+} */
 
 /* ... (your existing styles) ... */
