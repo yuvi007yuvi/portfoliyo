@@ -15,41 +15,26 @@
     --main-bg-color: #00abf0;
 }
 
-html {
-    font-size: 62.5%;
-    overflow: auto;
-}
-
 body {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.navbar {
     padding: 2rem 9%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
 }
 
-.logo {
+.navbar-brand {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-}
+/* .navbar-dark  {
+    background-color: var(--text-color);
+} */
 
-.nav a {
+.navbar-nav a {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 500;
@@ -57,37 +42,78 @@ body {
     transition: .3s;
 }
 
-#menu-icon {
+.navbar-nav a:hover,
+.navbar-nav a.active {
+    color: var(--main-bg-color);
+}
+
+.navbar-toggler {
     font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
-    /* display: none; */
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background: var(--second-bg-color);
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
+.collapse.navbar-collapse {
+    justify-content: flex-end;
+}
 
-    .nav.active {
-        display: flex;
-    }
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
 
-    .nav a {
-        margin: 10px 0;
-    }
+.navbar-nav .nav-item {
+    list-style: none;
+}
 
-    #menu-icon {
-        display: block;
+.navbar-toggler-icon {
+    font-size: 2rem;
+}
+
+.glitch {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    position: relative;
+    font-weight: bold;
+}
+
+.glitch span {
+    position: relative;
+    display: inline-block;
+    transform-origin: 0 100%;
+    transform: skewY(0);
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(title);
+    position: absolute;
+    color: var(--main-bg-color);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--text-color);
+    animation: glitch 1s linear infinite;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--text-color);
+    animation: glitch 2s linear infinite;
+}
+
+@keyframes glitch {
+    2%,64% {
+        transform: skewY(0.5deg);
+    }
+    4%,60% {
+        transform: skewY(-0.5deg);
+    }
+    62% {
+        transform: skewY(1deg);
     }
 }
 
@@ -135,10 +161,6 @@ img.vector{
     .home-contant {
         width: 100%;
         margin-bottom: 20px; /* Add space between the two divs */
-    }
-
-    .vector-container {
-         /* Add space between the two divs */
     }
 }
 
@@ -198,11 +220,7 @@ body {
     display: none;
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
 
-}
 
 .home {
     display: flex;
@@ -635,21 +653,91 @@ section {
         text-align: left; /* Align text to the left */
     }
 
-    
-    .home-sci {
-        position: relative;
-        /* display: flex; */
-        justify-content: space-between;
-        /* width: 30.5rem; */
-        /* height: 10.5rem; */
+}
+
+/* form css start  */
+#contact {
+    background: var(--second-bg-color);
+    padding: 6rem 0;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#contact .heading {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#contact form {
+    max-width: 600px;
+    width: 100%;
+}
+
+#contact form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact form label {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 0.5rem;
+}
+
+#contact form button {
+    background: var(--main-bg-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact form button:hover {
+    background-color: green;
+}
+#contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact .form-container {
+    flex: 1;
+    max-width: 600px;
+}
+
+#contact .map-container {
+    flex: 1;
+    margin-left: 2rem; /* Adjust the margin between the form and map */
+}
+
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    #contact .contact-content {
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* .home-sci {
-
-    } */
+    #contact .map-container {
+        margin-left: 0;
+        margin-top: 2rem; /* Add margin on top for spacing */
+    }
 }
-/* .navbar{
-    background-color: transparent;
-} */
-
-/* ... (your existing styles) ... */
