@@ -30,21 +30,19 @@ body {
     font-weight: 600;
 }
 
-/* .navbar-dark  {
-    background-color: var(--text-color);
-} */
 
 .navbar-nav a {
-    font-size: 1.7rem;
-    color: var(--text-color);
+    font-size: 2rem;
+    color: var(--main-bg-color);
     font-weight: 500;
     margin-left: 3.5rem;
     transition: .3s;
+    text-decoration: none;
 }
 
-.navbar-nav a:hover,
-.navbar-nav a.active {
-    color: var(--main-bg-color);
+.navbar-item a:hover,
+.navbar-item a.active {
+    color: var(--text-color);
 }
 
 .navbar-toggler {
