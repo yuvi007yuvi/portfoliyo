@@ -278,3 +278,9 @@ h2 {
     margin-bottom: 30px; /* Add margin below the heading */
     /* Add any other styles as needed */
 }
+.map-container ,input,textarea{
+    filter: grayscale(100) invert(10);
+}
+.h-captcha{
+    filter: grayscale(100) invert(10);
+}
