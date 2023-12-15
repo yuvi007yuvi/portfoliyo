@@ -24,7 +24,7 @@
 }
 
 .footer {
-    background-color: #081b29;
+    background-color: #04283f6b;
     color: #ededed;
     padding: 40px 9%;
     text-align: center;
@@ -55,9 +55,9 @@
     color: #00abf0;
 }
 
-.footer-social a {
+.home-sci a {
     font-size: 2rem;
-    color: #ededed;
+    /* color: #ededed; */
     margin: 0 10px;
     text-decoration: none;
 }
@@ -88,7 +88,7 @@
 }
 logo {
     /*   background: black; */
-      color: black;
+      /* color: black; */
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -97,9 +97,7 @@ logo {
       box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
     }
     
-    .container {
-      /* text-align: center; */
-    }
+
     
     .glitch {
       font-size: 5rem;
@@ -171,6 +169,7 @@ logo {
 .section-heading {
     font-size: 6.5rem;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .project-container {
@@ -206,7 +205,7 @@ logo {
 
 h2 {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
     /* font-size: ; */
 }
 
@@ -259,4 +258,23 @@ h2.typing::after {
     50% {
         opacity: 1;
     }
+}
+.container.projects-section {
+    max-width: 1400px; /* Increase the max-width */
+    margin: 50px auto; /* Add margin for spacing */
+    padding: 20px; /* Add padding for spacing inside the container */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add space between projects */
+}
+
+/* Additional styles for section-heading if needed */
+h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2em; /* Increase the font size */
+    margin-bottom: 30px; /* Add margin below the heading */
+    /* Add any other styles as needed */
 }
