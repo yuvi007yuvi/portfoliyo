@@ -194,47 +194,81 @@
     </section>
     <!-- projects code starts hear  -->
     <section class="container" id="projects">
-        <h2 class="section-heading">Projects </h2>
+        <h2 class="section-heading">Projects</h2>
+    
+        <!-- Dropdown for project categories -->
+        <label for="projectCategory">Select Category:</label>
+        <select id="projectCategory" onchange="filterProjects()">
+            <option value="all">All Projects</option>
+            <option value="web-development">Web Development</option>
+            <option value="other-projects">Other Projects</option>
+            <!-- Add more categories as needed -->
+        </select>
+    
         <div class="project-container">
-            <div class="project">
+            <!-- Web Development Projects -->
+            <div class="project web-development">
                 <a href="https://yuvi007yuvi.github.io/music-App/">
                     <img src="images/musicplayerin js .png" alt="Project 1 Preview"></a>
                 <h3>The Music Player</h3>
-                <p>The Music Player project is a JavaScript-driven application that allows users to play and
-                    control
+                <p>The Music Player project is a JavaScript-driven application that allows users to play and control
                     their favorite music tracks. It supports features like play, pause, skip, volume control,
-                    and a
-                    progress bar. The user-friendly interface provides an enjoyable music listening experience
-                    with
-                    a touch of interactivity.</p>
-
+                    and a progress bar. The user-friendly interface provides an enjoyable music listening experience
+                    with a touch of interactivity.</p>
             </div>
-
-            <div class="project">
+            <div class="project web-development">
                 <a href="https://yuvi007yuvi.github.io/weather-app/">
                     <img src="images/weather application in js with api.png" alt="Project 2 Preview"></a>
                 <h3>The Weather App</h3>
                 <p>Description: The Weather App is a JavaScript-powered application that provides real-time
-                    weather
-                    information based on user input or location detection. Users can check the current weather
-                    conditions, temperature, humidity, and more, making it a handy tool for planning outdoor
-                    activities.</p>
-
+                    weather information based on user input or location detection. Users can check the current weather
+                    conditions, temperature, humidity, and more, making it a handy tool for planning outdoor activities.</p>
             </div>
-            <div class="project">
+    
+            <!-- Other Projects -->
+            <div class="project other-projects">
                 <a href="https://yuvi007yuvi.github.io/TO-DO-APP/">
-                    <img src="images/to-do application in js .png" alt="Project 2 Preview"></a>
+                    <img src="images/to-do application in js .png" alt="Project 3 Preview"></a>
                 <h3>The Todo List</h3>
                 <p>The Todo List application is a JavaScript-driven task manager designed to help users organize
                     their daily activities. Users can add, edit, and delete tasks, mark them as complete, and
                     prioritize items. With a clean and intuitive interface, it enhances productivity by keeping
                     track of tasks efficiently.</p>
-
             </div>
-
-            <!-- Add more project items as needed -->
+            <div class="project other-projects">
+                <!-- Add more projects in the "other-projects" category as needed -->
+            </div>
         </div>
+    
+        <!-- JavaScript code for filtering projects -->
+        <script>
+            function filterProjects() {
+                // Get the selected category from the dropdown
+                var selectedCategory = document.getElementById("projectCategory").value;
+    
+                // Hide all projects
+                var projects = document.getElementsByClassName("project");
+                for (var i = 0; i < projects.length; i++) {
+                    projects[i].style.display = "none";
+                }
+    
+                // Show projects belonging to the selected category
+                if (selectedCategory === "all") {
+                    // Show all projects if "All Projects" is selected
+                    for (var j = 0; j < projects.length; j++) {
+                        projects[j].style.display = "block";
+                    }
+                } else {
+                    // Show projects based on the selected category
+                    var selectedProjects = document.getElementsByClassName(selectedCategory);
+                    for (var k = 0; k < selectedProjects.length; k++) {
+                        selectedProjects[k].style.display = "block";
+                    }
+                }
+            }
+        </script>
     </section>
+    
 
 
 
